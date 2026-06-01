@@ -34,7 +34,7 @@ class UI:
 
     def zobraz_konec_hry(self):
         self.text.goto(0, 0)
-        self.text.write("GAME OVER!", align="center", font=("Arial", 36, "bold"))
+        self.text.write("KONEC HRY", align="center", font=("Arial", 36, "bold"))
 
     def aktualizuj_skore(self, skore):
         self.skore_pen.clear()
