@@ -19,7 +19,7 @@ main.py - Spouštěcí soubor. Nastavuje velikost herního okna, načítá textu
 
 engine.py - Řídí herní logiku, eviduje postavené bloky (v seznamu self.polozene_bloky) a vyhodnocuje výpočty kolizí při dopadu. Zajišťuje posun kamery.
 
-ui.py - Stará se o vykreslování textů na obrazovku (skóre, Game Over). Obsahuje metody pro čtení a zápis highscore.
+ui.py - Stará se o vykreslování textů na obrazovku (skóre, Game Over). Obsahuje metody pro čtení a zápis highscore do textového souboru.
 
 bloky.py -
 Bloky - Vytváří základní želvu, nastaví jí tvar Budova.gif a určuje její hitbox (60x40 pixelů).
@@ -38,6 +38,6 @@ Pomoc s vysvětlením chyb, které jsem v projektu měl (nebylo jich málo).
 
 Nechal jsem si poradit jak přidat vlastní texturu do hry. Modul turtle nepřijímá .jpg ale pouze .gif. 
 
-A také jak ukládat highscore.
+A také jak ukládat highscore do textového souboru.
 
 Projekt jsem dělal lokalně ve visual studiu i s většinou úprav, protože mi nedošlo že máme commitovat všechny změny. Takže jsou ukázany commity pouze u posledních pár změn.
