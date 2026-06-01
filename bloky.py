@@ -6,11 +6,11 @@ class bloky:
         self.shape.shape("square")
         self.shape.color("red")
         self.shape.penup()
-        self.shape.shapesize(stretch_wid=1.5, stretch_len=4)
+        self.shape.shapesize(stretch_wid=2, stretch_len=3)
         self.shape.goto(x, y)
         
-        self.block_width = 80
-        self.block_height = 30
+        self.block_width = 60
+        self.block_height = 40
 
 class MovingBlock(bloky):
     def __init__(self, x, y, speed):
