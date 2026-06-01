@@ -31,7 +31,7 @@ class GameEngine:
 
             else:
                 posledni_blok = self.polozene_bloky[-1]
-                cilove_y = posledni_blok.shape.ycor() + 30
+                cilove_y = posledni_blok.shape.ycor() + 40
 
             if nove_y <= cilove_y:
                 self.aktualni_blok.shape.sety(cilove_y)
@@ -42,7 +42,7 @@ class GameEngine:
                     aktualni_x = self.aktualni_blok.shape.xcor()
                     posledni_x = self.polozene_bloky[-1].shape.xcor()
                     rozdil_x = abs(aktualni_x - posledni_x)
-                    if rozdil_x > 80:
+                    if rozdil_x > 60:
                         trefa = False
                 if trefa:
                     self.je_padajici = False
@@ -51,7 +51,7 @@ class GameEngine:
 
                     if self.aktualni_blok.shape.ycor() > 100:
                         for blok in self.polozene_bloky:
-                            nove_y_bloku = blok.shape.ycor() - 30
+                            nove_y_bloku = blok.shape.ycor() - 40
                             blok.shape.sety(nove_y_bloku)
 
 
