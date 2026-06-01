@@ -1,4 +1,4 @@
-from bloky import MovingBlock
+from bloky import Pohybujiciblok
 from ui import UI
 
 class GameEngine:
@@ -7,7 +7,7 @@ class GameEngine:
         self.sirka = 600
         self.vyska = 800
         self.polozene_bloky = []
-        self.aktualni_blok = MovingBlock(0, 250, 4)
+        self.aktualni_blok = Pohybujiciblok(0, 250, 4)
         self.je_padajici = False
         self.konec_hry = False
         self.ui = UI()
@@ -47,8 +47,9 @@ class GameEngine:
                 if trefa:
                     self.je_padajici = False
                     self.polozene_bloky.append(self.aktualni_blok)
-                    self.ui.aktualizuj_skore(len(self.polozene_bloky))
+                    self.ui.uloz_highscore(len(self.polozene_bloky))
 
+                    self.ui.aktualizuj_skore(len(self.polozene_bloky))
                     if self.aktualni_blok.shape.ycor() > 100:
                         for blok in self.polozene_bloky:
                             nove_y_bloku = blok.shape.ycor() - 40
@@ -57,7 +58,7 @@ class GameEngine:
 
 
                     nova_rychlost = 4 + (len(self.polozene_bloky) * 0.3)
-                    self.aktualni_blok = MovingBlock(0, 250, nova_rychlost)
+                    self.aktualni_blok = Pohybujiciblok(0, 250, nova_rychlost)
                 else:
                     self.konec_hry = True
                     self.ui.uloz_highscore(len(self.polozene_bloky))

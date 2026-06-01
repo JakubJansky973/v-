@@ -10,7 +10,7 @@ class bloky:
         self.block_width = 60
         self.block_height = 40
 
-class MovingBlock(bloky):
+class Pohybujiciblok(bloky):
     def __init__(self, x, y, speed):
         super().__init__(x, y)
         self.speed = speed 

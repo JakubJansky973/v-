@@ -39,9 +39,7 @@ class UI:
     def aktualizuj_skore(self, skore):
         self.skore_pen.clear()
 
-        if skore > self.highscore:
-            self.highscore = skore
         
-        vypis = "Patra: " + str(skore)
+        vypis = "Patra: " + str(skore) + " | Nejlepší: " + str(self.highscore)
             
         self.skore_pen.write(vypis, font=("Arial", 24))
