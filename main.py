@@ -8,6 +8,7 @@ def setup_screen():
     screen.bgcolor("skyblue")
     screen.setup(width=600, height=800)
     screen.tracer(0)
+    screen.register_shape("budova.gif")
     return screen
 def main():
     screen = setup_screen()

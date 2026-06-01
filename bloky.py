@@ -3,10 +3,8 @@ import turtle
 class bloky:
     def __init__(self, x, y):
         self.shape = turtle.Turtle()
-        self.shape.shape("square")
-        self.shape.color("red")
+        self.shape.shape("budova.gif")
         self.shape.penup()
-        self.shape.shapesize(stretch_wid=2, stretch_len=3)
         self.shape.goto(x, y)
         
         self.block_width = 60
